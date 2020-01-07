@@ -1,6 +1,6 @@
 package Tas;
 
-public class Task {
+public class Task {  
 	
 
 }
