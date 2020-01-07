@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+public class Employee {  
 
 	private int employeeId;
 	private String employeeName;
