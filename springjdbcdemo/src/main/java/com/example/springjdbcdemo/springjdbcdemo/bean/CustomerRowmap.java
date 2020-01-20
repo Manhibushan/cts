@@ -1,0 +1,24 @@
+package com.example.springjdbcdemo.springjdbcdemo.bean;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class CustomerRowmap implements RowMapper<Customer> {
+
+	@Override
+	public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
+		
+			
+			Customer customer=new Customer();
+			customer.setUId(rs.getString("uid"));
+			customer.setFName(rs.getString("first_name"));
+			customer.setLname(rs.getString("last_name"));
+			customer.setEmail(rs.getString("email"));
+			return customer;
+		}
+
+		
+
+}
