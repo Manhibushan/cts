@@ -23,6 +23,7 @@ public class App
 			 try
 		      {
 		    	  ApplicationContext context=new ClassPathXmlApplicationContext("applicationcontext.xml");
+		    	  
 		    	  UserService dao=context.getBean("service",UserService.class);
 		    	  UserDetail e=new UserDetail("3453", "ghjghj", "ghgjk");
 		    	    dao.createUser(e); 
