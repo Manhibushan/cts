@@ -9,4 +9,7 @@ public interface Todoservice {
 	
 	public List<Todo> getAlltodos();
 	public Optional<Todo> gettodoById(Integer todoId);
+	public Todo create(Todo todo);
+	public void deletetodobyId(Integer todoId);
+	public void deleteAll();
 }

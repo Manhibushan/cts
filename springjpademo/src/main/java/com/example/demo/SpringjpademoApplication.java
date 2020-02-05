@@ -10,7 +10,7 @@ import com.example.demo.model.Todo;
 
 @SpringBootApplication
 public class SpringjpademoApplication implements CommandLineRunner {
-private Tododao tododao;
+/*private Tododao tododao;
 
 
 
@@ -19,7 +19,7 @@ private Tododao tododao;
 	public SpringjpademoApplication(Tododao tododao) {
 	super();
 	this.tododao = tododao;
-}
+}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringjpademoApplication.class, args);
@@ -27,12 +27,13 @@ private Tododao tododao;
 
 	@Override
 	public void run(String... args) throws Exception {
+		
 		// TODO Auto-generated method stub
-		tododao.save(new Todo("todo-1"));
+		/*tododao.save(new Todo("todo-1"));
 		tododao.save(new Todo("todo-2"));
 		tododao.save(new Todo("todo-3"));
 		tododao.save(new Todo("todo-4"));
-		
+		*/
 	}
 
 }

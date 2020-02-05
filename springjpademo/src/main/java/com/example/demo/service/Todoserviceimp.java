@@ -35,5 +35,20 @@ public Todoserviceimp(Tododao tododao) {
 		Optional<Todo> todo=tododao.findById(todoId);
 		return todo;
 	}
+	@Override
+	public Todo create(Todo todo) {
+		// TODO Auto-generated method stub
+		return tododao.save(todo);
+	}
+	@Override
+	public void deletetodobyId(Integer todoId) {
+		tododao.deleteById(todoId);
+	}
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		tododao.deleteAll();
+		
+	}
 
 }
