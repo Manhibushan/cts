@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +14,6 @@ import com.example.demo.model.Todo;
 public interface Tododao extends JpaRepository<Todo, Integer> 
 {
 
-	
+	public List<Todo> findBytodoName(String todoName);
+	public void deleteBytodoName(String todoName );
 }

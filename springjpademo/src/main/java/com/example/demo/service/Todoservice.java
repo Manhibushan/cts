@@ -12,4 +12,7 @@ public interface Todoservice {
 	public Todo create(Todo todo);
 	public void deletetodobyId(Integer todoId);
 	public void deleteAll();
+	public List<Todo> findbytodoname(String todoName);
+	public void deleteBytodoName(String todoName );
+	
 }

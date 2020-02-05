@@ -87,11 +87,20 @@ public class Todocontroller {
 		todoservice.deletetodobyId(todoId);
 	}
 	@DeleteMapping("/todos")
-	public void deleteAll()
-	
-	{
+	public void deleteAll(){
+
 		todoservice.deleteAll();
 	}
-	
+	@GetMapping("/todos/findBytodoName/{todoName}")
+	public List<Todo> findBytodoName(@PathVariable String todoName)
+	{
+		return todoservice.findbytodoname(todoName);
+		
+	}
+	@DeleteMapping("/todos/deleteBytodoName/{todoName}")
+	public void deleteBytodoName(@PathVariable String todoName)
+	{
+			todoservice.deleteBytodoName(todoName);
+	}
 }
 

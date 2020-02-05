@@ -50,5 +50,15 @@ public Todoserviceimp(Tododao tododao) {
 		tododao.deleteAll();
 		
 	}
+	@Override
+	public List<Todo> findbytodoname(String todoName) {
+		// TODO Auto-generated method stub
+		return tododao.findBytodoName(todoName);
+	}
+	@Override
+	public void deleteBytodoName(String todoName) {
+		tododao.deleteBytodoName(todoName);
+		
+	}
 
 }
