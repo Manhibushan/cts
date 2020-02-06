@@ -13,12 +13,13 @@ public class Item {
 	private String itemId;
 	private String itemName;
 	private String itemPrice;
-	//@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
-	//private String Localdate;
-	public Item(String itemName, String itemPrice) {
+	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
+	private String Localdate;
+	public Item(String itemName, String itemPrice, String localdate) {
 		super();
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
+		Localdate = localdate;
 	}
-
+	
 }
