@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,6 +55,7 @@ public ResponseEntity<Errormessage> handle2(Exception e)
 		@PostMapping("/items")
 		public Item createItem(@RequestBody Item item)
 		{
+			item.setDate(LocalDate.now());
 			return itemRepositry.insert(item);
 		}
 		@PutMapping("/items")
