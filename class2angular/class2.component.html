@@ -1,0 +1,39 @@
+<!--<element [ngSwitch]="number">
+
+    <h1 *ngSwitchCase="'one'">
+        
+    1    </h1>
+    </element>-->
+<ul *ngFor="let name of names">
+  <li class="text-info">{{ name }}</li>
+</ul>
+<button class="btn btn-primary" (click)="onButtonClicked()">Refresh</button>
+<div class="container">
+  <h1 class="text-danger font-italic text-break">EmployeesList</h1>
+  <table class="table   table-info  table-hover">
+    <thead class="table-success">
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--<tr *ngFor="let employee of employees;trackBy:trackByEmpId">
+        <td>{{employee.empid}}</td>
+        <td>{{employee.empname}}</td>
+        <td>{{employee.age}}</td>
+    </tr>-->
+
+      <tr
+        *ngFor="let employee of employees; index as i; odd as o; even as e"
+        [style.background]="o ? 'white' : 'grey'"
+      >
+        <td>{{ i }} - {{ o }} - {{ e }}</td>
+        <td>{{ employee.empid }}</td>
+        <td>{{ employee.empname }}</td>
+        <td>{{ employee.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
